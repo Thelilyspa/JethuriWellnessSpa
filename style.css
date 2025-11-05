@@ -1,0 +1,50 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+
+body { background-color: #FFFFFF; color: #0B2545; }
+
+/* Hero */
+.hero { text-align: center; padding: 40px 20px; }
+.hero h1 { color: #0B2545; font-size: 1.8rem; margin-bottom: 10px; }
+.hero p { color: #F4B6C2; font-size: 1rem; }
+
+/* Gallery */
+.gallery { overflow-x: scroll; display: flex; scroll-snap-type: x mandatory; }
+.gallery .slider { display: flex; }
+.gallery .slide { flex: 0 0 80%; margin: 10px; scroll-snap-align: center; position: relative; }
+.gallery img { width: 100%; border-radius: 12px; }
+
+/* Description box */
+.description-box {
+  text-align: center;
+  padding: 20px;
+  background: #F4B6C2;
+  color: white;
+  display: none;
+  margin: 10px 20px;
+  border-radius: 10px;
+}
+
+/* Testimonials */
+.testimonials { text-align: center; padding: 20px; }
+.testimonial { display: none; font-style: italic; color: #0B2545; }
+.testimonial.active { display: block; }
+
+/* Buttons */
+.contact { text-align: center; padding: 20px; display: flex; flex-direction: column; gap: 10px; }
+.btn {
+  text-decoration: none; color: white;
+  background: #0B2545;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+}
+.btn.whatsapp { background: #25D366; }
+.btn.location { background: #F4B6C2; }
+
+.btn:hover { opacity: 0.85; }
+
+/* Mobile-friendly */
+@media (max-width: 600px) {
+  .hero h1 { font-size: 1.4rem; }
+  .gallery .slide { flex: 0 0 90%; }
+}
